@@ -111,15 +111,15 @@
         }
 
         .content{
-            padding: 120px;
+            padding: 10%;
             text-align: center;
-            margin-bottom: 200px
+            margin-bottom: 0px;
         }
 
         .services {
             height: auto;
-            padding: 30px;
-            margin-bottom: 200px; /* Adjust this value as needed */
+            padding: 2%;
+            margin-bottom: 3%; /* Adjust this value as needed */
         }
 
         .content h1{
