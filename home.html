@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=de0vice-width, initial-scale=1.0">
+    <title>Jeremiah Xu - Visual Artist, Computer Engineer, and Performer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&family=Lato:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .shooting-stars-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .shooting-star {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #f1c4c4;
+            animation: shootingStar 2s linear infinite;
+        }
+        @keyframes shootingStar {
+            0% {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(100vw, 100vh);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="flex items-centre justify-between">
+                <div class="left flex justify-right">
+                    <div class="logo">
+                        <img src="./images/logo2.png" width="50px" alt="logo">
+                    </div>
+                    <div>
+                        <a href="home.html"><span style="color: rgba(220, 180, 255, 0.467); font-size: larger;">Home</span></a>
+                        <a href="digital.html">Digital Arts</a>
+                        <a href="fineart.html">Fine Arts</a>
+                        <a href="3d.html">3D</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <button class="btn btn-primary" id="contactBtn">Contact</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero flex items-centre justify-between">
+        <div class="left flex-1 justify-center">
+            <img src="./images/self photo.jpg" alt="Profile">
+        </div>
+        <div class="right flex-1">
+            <h6>Jeremiah Xu</h6>
+            <h1>I'm a Visual Artist & <br> <span>Software Engineer</span></h1>
+            <h3>This website is hand-coded with html, css, & javascript.</h3>
+            <h3>Check out all the creative works I've done!</h3>
+        </div>
+    </div>
+
+    <section class="services" id="section5">
+        <div class="container">
+            <div class="services-head"></div>
+            <div class="card-grid">
+                <div class="card">
+                    <a href="home.html"><h2>HOME</h2></a>
+                </div>
+                <div class="card">
+                    <a href="digital.html"><h2>DIGITAL ART</h2></a>
+                </div>
+                <div class="card">
+                    <a href="fineart.html"><h2>FINE ART</h2></a>
+                </div>
+                <div class="card">
+                    <a href="3d.html"><h2>3D</h2></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Shooting Star -->
+    <!-- Container for shooting stars -->
+    <div id="shooting-stars-container"></div>
+    
+    <script>
+        // Function to generate random number between min and max (inclusive)
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        // Function to generate shooting stars with random positions, sizes, and speeds
+        function generateShootingStars() {
+            var container = document.getElementById("shooting-stars-container");
+            var numStars = 16; // Number of shooting stars
+            
+            for (var i = 0; i < numStars; i++) {
+                var star = document.createElement("div");
+                star.className = "shooting-star";
+                star.style.top = getRandomNumber(0, window.innerHeight) + "px";
+                star.style.left = getRandomNumber(0, window.innerWidth) + "px";
+                
+                // Random size
+                var size = getRandomNumber(3, 8);
+                star.style.width = size + "px";
+                star.style.height = size + "px";
+                
+                // Random animation duration between 2s and 5s
+                var duration = getRandomNumber(2, 6);
+                star.style.animationDuration = duration + "s";
+                
+                container.appendChild(star);
+            }
+        }
+
+        // Generate shooting stars when the page loads
+        window.onload = generateShootingStars;
+
+       
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('contactModal');
+            const btn = document.getElementById('contactBtn');
+            const span = document.getElementsByClassName('close')[0];
+
+            // When the user clicks the button, open the modal
+            btn.onclick = function() {
+                modal.style.display = 'block';
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = 'none';
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            }
+        });
+    </script>    
+    
+    <!-- Modal structure -->
+    <div id="contactModal" class="contactmodal">
+        <div class="contactmodal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Information</h2>
+            <p>Email: jx2515@columbia.edu</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Jeremiah Xu. All rights reserved.</p>
+            <p>Email: jx2515@columbia.edu</p>
+            <div class="socials">
+                <a href="#"><img src="./images/ins.png" width="30px" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

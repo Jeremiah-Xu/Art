@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Arts - Jeremiah Xu</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&family=Lato:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        .content {
+            height: auto;
+            padding: 10%px;
+            margin-bottom: 0px; /* Adjust this value as needed */
+        }
+
+        .services {
+            height: auto;
+            padding: 0px;
+            margin-bottom: 60px; /* Adjust this value as needed */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery-item {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: transform 0.3s;
+            text-align: center;
+            background-color: var(--bgDark);
+            color: #ffffff;
+            display: inline-block;
+            width:75%;
+            height:auto;
+            padding:10px;
+            border: 1px solid rgba(56, 52, 60, 0.467);
+            border-radius: 10px;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item figcaption {
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        /* Video and image container styles */
+        .media-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px; /* Space between video and images */
+        }
+
+        .media-container video {
+            width: 70%; /* Adjust width as needed */
+            max-width: 640px; /* Adjust max-width as needed */
+            height: auto; /* Maintain aspect ratio */
+            display: flex;
+        }
+
+        .media-container .image-container {
+            flex: 0 0 calc(33% - 20px);
+            display: flex;
+            gap: 20px; /* Space between images */
+        }
+
+        .media-container .image-container img {
+            width: auto; /* Adjust image width as needed */
+            height: auto; /* Maintain aspect ratio */
+            max-height: 250px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="flex items-centre justify-between">
+                <div class="left flex justify-right">
+                    <div class="logo">
+                        <img src="./images/logo2.png" width="50px" alt="logo">
+                    </div>
+                    <div>
+                        <a href="home.html">Home</a>
+                        <a href="digital.html">Digital Arts</a>
+                        <a href="fineart.html">Fine Arts</a>
+                        <a href="3d.html"><span style="color: rgba(220, 180, 255, 0.467); font-size: larger;">3D</span></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <button class="btn btn-primary" id="contactBtn">Contact</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="progress-container">
+        <div class="progress-item" data-target="#section2">DRZ Suit</div>
+        <div class="progress-item" data-target="#section3">DRZ Sword</div>
+        <div class="progress-item" data-target="#section4">DRZ Sword Animated</div>
+        <div class="progress-item" data-target="#section1">Donut</div>
+        <div class="progress-item" data-target="#section5">End</div>
+    </div>
+
+    <div class="content" id="section2">
+        <h1>3D</h1>
+        <figure class="gallery-item">
+            <figcaption><strong>Zbrush2024 Dream Realm suit Z (turntable)</strong></figcaption>
+            <video width="90%" autoplay muted loop>
+                <source src="./images/DRZvideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="media-container">
+                <div class="image-container">
+                    <img src="./images/DRZa.png" alt="Portfolio Image 1">
+                    <img src="./images/DRZb.png" alt="Portfolio Image 2">
+                    <img src="./images/DRZc.png" alt="Portfolio Image 3">
+                </div>
+            </div>
+        </figure>
+    </div>
+
+    <div class="content" id="section3">
+        <figure class="gallery-item">
+            <figcaption><strong>Zbrush2024 Dream Realm suit Z sword (turntable)</strong></figcaption>
+            <video width="90%" autoplay muted loop>
+                <source src="./images/DRZsword.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="media-container">
+                <div class="image-container">
+                    <img src="./images/DRZman+sword3.jpg" alt="Portfolio Image 2">
+                    <img src="./images/DRZman+sword4.jpg" alt="Portfolio Image 3">
+                    <img src="./images/DRZman+sword2.jpg" alt="Portfolio Image 4">
+                </div>
+            </div>
+        </figure>
+    </div>
+
+    <div class="content" id="section4">
+        <figure class="gallery-item">
+            <figcaption><strong>Dream Realm Z sword blender animation</strong></figcaption>
+            <video width="90%" autoplay muted loop>
+                <source src="./images/DRSvideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="media-container">
+                <div class="image-container">
+                </div>
+            </div>
+        </figure>
+    </div>
+
+    <div class="content" id="section1">
+
+        <figure class="gallery-item">
+            <figcaption><strong>Blender 4.0 Donut Animation</strong></figcaption>
+            <figcaption>(created following the tutorial: https://www.youtube.com/watch?v=B0J27sf9N1Y)</figcaption>
+            <video width="50%" autoplay muted loop>
+                <source src="./images/donuts.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </figure>
+    </div>
+
+
+    <section class="services" id="section5">
+        <div class="container">
+            <div class="services-head"></div>
+            <div class="card-grid">
+                <div class="card">
+                    <a href="home.html"><h2>HOME</h2></a>
+                </div>
+                <div class="card">
+                    <a href="digital.html"><h2>DIGITAL ART</h2></a>
+                </div>
+                <div class="card">
+                    <a href="fineart.html"><h2>FINE ART</h2></a>
+                </div>
+                <div class="card">
+                    <a href="3d.html"><h2>3D</h2></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for image zoom -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <!--contact Modal structure -->
+    <div id="contactModal" class="contactmodal">
+        <div class="contactmodal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Information</h2>
+            <p>Email: jx2515@columbia.edu</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('myModal');
+            const modalImg = document.getElementById("img01");
+            const images = document.querySelectorAll('.gallery-container img');
+            const span = document.getElementsByClassName("close")[0];
+
+            images.forEach(img => {
+                img.addEventListener('click', () => {
+                    modal.style.display = "block";
+                    modalImg.src = img.src;
+                });
+            });
+
+            span.onclick = function() { 
+                modal.style.display = "none";
+            }
+
+            modal.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            const progressItems = document.querySelectorAll('.progress-item');
+
+            progressItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    document.querySelector(item.getAttribute('data-target')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            updateProgress(); // Initial update
+
+            window.onscroll = function() { updateProgress(); };
+
+            function updateProgress() {
+                const sections = document.querySelectorAll('.content, .services');
+                const progressItems = document.querySelectorAll('.progress-item');
+
+                sections.forEach((section, index) => {
+                    const rect = section.getBoundingClientRect();
+                    const isInView = (rect.top >= 0 && rect.top < window.innerHeight / 2) || 
+                                    (rect.bottom >= window.innerHeight / 2 && rect.bottom < window.innerHeight);
+                    if (isInView) {
+                        progressItems.forEach(item => item.classList.remove('active'));
+                        progressItems[index].classList.add('active');
+                    }
+                });
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('contactModal');
+            const btn = document.getElementById('contactBtn');
+            const span = document.getElementsByClassName('close')[0];
+
+            // When the user clicks the button, open the modal
+            btn.onclick = function() {
+                modal.style.display = 'block';
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = 'none';
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            }
+        });
+        
+        let isScrolling;
+
+        window.addEventListener('scroll', () => {
+            const progressContainer = document.getElementById('progress-container');
+
+            // Add the visible class when scrolling
+            progressContainer.classList.add('visible');
+
+            // Clear our timeout throughout the scroll
+            window.clearTimeout(isScrolling);
+
+            // Set a timeout to run after scrolling ends
+            isScrolling = setTimeout(() => {
+                // Remove the visible class when scrolling stops
+                progressContainer.classList.remove('visible');
+            }, 1000); // Adjust the timeout duration as needed
+        });
+
+        // Add hover event listeners to keep the progress bar visible on hover
+        const progressContainer = document.getElementById('progress-container');
+
+        progressContainer.addEventListener('mouseover', () => {
+            progressContainer.classList.add('visible');
+        });
+
+        progressContainer.addEventListener('mouseout', () => {
+            // Only remove the visible class if not scrolling
+            if (!isScrolling) {
+                progressContainer.classList.remove('visible');
+            }
+        });
+
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Jeremiah Xu. All rights reserved.</p>
+            <p>Email: jx2515@columbia.edu</p>
+            <div class="socials">
+                <a href="#"><img src="./images/ins.png" width="30px" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

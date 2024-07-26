@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Arts - Jeremiah Xu</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&family=Lato:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        .content{
+            padding: 10%;
+            text-align: center;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px; /* Adjust the width as needed */
+            margin: 0 auto; /* Centers the container */
+        }
+
+
+        .gallery-item,
+        .gallery-item-big {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            text-align: center;
+            background-color: var(--bgDark);
+            color: #ffffff;
+        }
+
+        .gallery-item {
+            flex: 0 0 calc(50% - 20px);
+        }
+
+        .gallery-item-big {
+            flex: 0 0 calc(99% - 20px);
+        }
+
+        .gallery-item img,
+        .gallery-item-big img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            object-fit: cover;
+        }
+
+        .gallery-item:hover,
+        .gallery-item-big:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item figcaption,
+        .gallery-item-big figcaption {
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: auto;
+            height: 90%;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="flex items-centre justify-between">
+                <div class="left flex justify-right">
+                    <div class="logo">
+                        <img src="./images/logo2.png" width="50px" alt="logo">
+                    </div>
+                    <div>
+                        <a href="home.html">Home</a>
+                        <a href="digital.html"><span style="color: rgba(220, 180, 255, 0.467); font-size: larger;">Digital Art</span></a>
+                        <a href="fineart.html">Fine Arts</a>
+                        <a href="3d.html">3D</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <button class="btn btn-primary" id="contactBtn">Contact</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="progress-container">
+        <div class="progress-item" data-target="#section1">DR Character</div>
+        <div class="progress-item" data-target="#section2">DR Landscape</div>
+        <div class="progress-item" data-target="#section3">DR Process</div>
+        <div class="progress-item" data-target="#section4">End</div>
+    </div>
+
+    <div class="content"  id="section1">
+        <h1>DIGITAL ARTS</h1>
+        <div class="gallery-container">
+            <figure class="gallery-item">
+                <img src="./images/DRXdark2.0.png" alt="Portfolio Image 1">
+                <figcaption>Dream Realm - Suit X</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="./images/DRYdark2.0.png" alt="Portfolio Image 2">
+                <figcaption>Dream Realm - Suit Y</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="./images/DRZdark.png" alt="Portfolio Image 3">
+                <figcaption>Dream Realm - Suit Z</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="./images/DRDdark2.0.png" alt="Portfolio Image 6">
+                <figcaption>Dream Realm - Suit D</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="content"  id="section2">
+        <h1>LANDSCAPES</h1>
+        <div class="gallery-container">
+            <figure class="gallery-item">
+                <img src="./images/DRXlandscape(4.0).jpg" alt="Portfolio Image 6">
+                <figcaption>landscape 1</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="./images/DRYlandscape(4.0).png" alt="Portfolio Image 5">
+                <figcaption>landscape 2</figcaption>
+            </figure>
+            <figure class="gallery-item-big">
+                <img src="./images/DRZlandscape(4.1).jpg" alt="Portfolio Image 7">
+                <figcaption>landscape 3</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="content"  id="section3">
+        <h1>PROCESS</h1>
+        <div class="gallery-container">
+            <figure class="gallery-item-big">
+                <img src="./images/DR-Z (1).jpeg" alt="Portfolio Image 4">
+                <figcaption>Suit Z progress map</figcaption>
+            </figure>
+        </div>
+    </div>
+
+
+    <section class="services" id="section5">
+        <div class="container">
+            <div class="services-head"></div>
+            <div class="card-grid">
+                <div class="card">
+                    <a href="home.html"><h2>HOME</h2></a>
+                </div>
+                <div class="card">
+                    <a href="digital.html"><h2>DIGITAL ART</h2></a>
+                </div>
+                <div class="card">
+                    <a href="fineart.html"><h2>FINE ART</h2></a>
+                </div>
+                <div class="card">
+                    <a href="3d.html"><h2>3D</h2></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for image zoom -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <!--contact Modal structure -->
+    <div id="contactModal" class="contactmodal">
+        <div class="contactmodal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Information</h2>
+            <p>Email: jx2515@columbia.edu</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('myModal');
+            const modalImg = document.getElementById("img01");
+            const images = document.querySelectorAll('.gallery-container img');
+            const span = document.getElementsByClassName("close")[0];
+
+            images.forEach(img => {
+                img.addEventListener('click', () => {
+                    modal.style.display = "block";
+                    modalImg.src = img.src;
+                });
+            });
+
+            span.onclick = function() { 
+                modal.style.display = "none";
+            }
+
+            modal.onclick = function() {
+                modal.style.display = "none";
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('contactModal');
+            const btn = document.getElementById('contactBtn');
+            const span = document.getElementsByClassName('close')[0];
+
+            // When the user clicks the button, open the modal
+            btn.onclick = function() {
+                modal.style.display = 'block';
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = 'none';
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('myModal');
+            const modalImg = document.getElementById("img01");
+            const images = document.querySelectorAll('.gallery-container img');
+            const span = document.getElementsByClassName("close")[0];
+
+            images.forEach(img => {
+                img.addEventListener('click', () => {
+                    modal.style.display = "block";
+                    modalImg.src = img.src;
+                });
+            });
+
+            span.onclick = function() { 
+                modal.style.display = "none";
+            }
+
+            modal.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            const progressItems = document.querySelectorAll('.progress-item');
+
+            progressItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    document.querySelector(item.getAttribute('data-target')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            updateProgress(); // Initial update
+
+            window.onscroll = function() { updateProgress(); };
+
+            function updateProgress() {
+                const sections = document.querySelectorAll('.content, .services');
+                const progressItems = document.querySelectorAll('.progress-item');
+
+                sections.forEach((section, index) => {
+                    const rect = section.getBoundingClientRect();
+                    const isInView = (rect.top >= 0 && rect.top < window.innerHeight / 2) || 
+                                    (rect.bottom >= window.innerHeight / 2 && rect.bottom < window.innerHeight);
+                    if (isInView) {
+                        progressItems.forEach(item => item.classList.remove('active'));
+                        progressItems[index].classList.add('active');
+                    }
+                });
+            }
+        });
+
+
+        let isScrolling;
+
+        window.addEventListener('scroll', () => {
+            const progressContainer = document.getElementById('progress-container');
+
+            // Add the visible class when scrolling
+            progressContainer.classList.add('visible');
+
+            // Clear our timeout throughout the scroll
+            window.clearTimeout(isScrolling);
+
+            // Set a timeout to run after scrolling ends
+            isScrolling = setTimeout(() => {
+                // Remove the visible class when scrolling stops
+                progressContainer.classList.remove('visible');
+            }, 1000); // Adjust the timeout duration as needed
+        });
+
+        // Add hover event listeners to keep the progress bar visible on hover
+        const progressContainer = document.getElementById('progress-container');
+
+        progressContainer.addEventListener('mouseover', () => {
+            progressContainer.classList.add('visible');
+        });
+
+        progressContainer.addEventListener('mouseout', () => {
+            // Only remove the visible class if not scrolling
+            if (!isScrolling) {
+                progressContainer.classList.remove('visible');
+            }
+        });
+
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Jeremiah Xu. All rights reserved.</p>
+            <p>Email: jx2515@columbia.edu</p>
+            <div class="socials">
+                <a href="#"><img src="./images/ins.png" width="30px" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
