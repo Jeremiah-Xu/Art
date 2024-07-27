@@ -56,15 +56,17 @@
         }
 
         .media-container .image-container {
-            flex: 0 0 calc(33% - 20px);
             display: flex;
+            flex-wrap: wrap;
             gap: 20px; /* Space between images */
+            justify-content: center;
         }
 
         .media-container .image-container img {
-            width: auto; /* Adjust image width as needed */
+            flex: 1 1 calc(33% - 20px); /* Flex-grow, flex-shrink, and flex-basis */
+            max-width: calc(33% - 20px); /* Ensure images don't exceed their container */ 
             height: auto; /* Maintain aspect ratio */
-            max-height: 250px;
+            object-fit: contain;
             display: block;
         }
     </style>
