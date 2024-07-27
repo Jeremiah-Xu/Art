@@ -28,7 +28,7 @@
 
         .container {
             max-width: 100%;
-            padding: 0 170px;
+            padding: 0 10%;
             margin: 0 auto;
             text-align: center;
             font-size: 18px;
@@ -117,7 +117,6 @@
         }
 
         .services {
-            height: auto;
             padding: 2%;
             margin-bottom: 3%; /* Adjust this value as needed */
         }
@@ -264,7 +263,7 @@
         section.services .card-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            column-gap: 2rem;
+            column-gap: 2%;
         }
 
         section.services .card-grid .card {
@@ -283,14 +282,6 @@
             text-align: center;
         }
         
-
-        section.services .card-grid .card img {
-            position: absolute;
-            top: -1.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            color: var(--secondary);
-        }
 
         section.services .card-grid .card h2 {
             font-weight: 400;
@@ -476,17 +467,10 @@
     }
 }
 
-@media (max-width: 768px) {
-    .container {
-        max-width: 540px;
-    }
+@media (max-width: 868px) {
 
     section {
         padding: 4rem 2rem;
-    }
-
-    section.services .card-grid {
-        grid-template-columns: 1fr;
     }
 
     header nav .left a {
@@ -496,9 +480,14 @@
     .hero .right h1 {
         font-size: 2.5rem;
     }
+
+    .btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.8rem;
+    }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .container {
         max-width: 100%;
         padding: 0 1rem;
@@ -510,7 +499,12 @@
     }
 
     .hero {
-        padding-top: 3
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
 
+    .btn {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.7rem;
     }
 }
