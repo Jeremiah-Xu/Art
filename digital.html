@@ -18,12 +18,13 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            max-width: 888px; /* Adjust the width as needed */
+            max-width: 900px; /* Adjust the width as needed */
             margin: 0 auto; /* Centers the container */
         }
 
 
         .gallery-item,
+        .gallery-item-mid,
         .gallery-item-big {
             display: flex;
             flex-direction: column;
@@ -40,6 +41,10 @@
         }
 
         .gallery-item {
+            flex: 0 0 calc(25% - 20px);
+        }
+
+        .gallery-item-mid{
             flex: 0 0 calc(50% - 20px);
         }
 
@@ -48,6 +53,7 @@
         }
 
         .gallery-item img,
+        .gallery-item-mid img,
         .gallery-item-big img {
             width: 100%;
             height: auto;
@@ -56,11 +62,13 @@
         }
 
         .gallery-item:hover,
+        .gallery-item-mid:hover,
         .gallery-item-big:hover {
             transform: scale(1.05);
         }
 
         .gallery-item figcaption,
+        .gallery-item-mid figcaption,
         .gallery-item-big figcaption {
             padding: 10px;
             font-size: 18px;
@@ -136,7 +144,6 @@
     <div id="progress-container">
         <div class="progress-item" data-target="#section1">DR Character</div>
         <div class="progress-item" data-target="#section2">DR Landscape</div>
-        <div class="progress-item" data-target="#section3">DR Process</div>
         <div class="progress-item" data-target="#section5">End</div>
     </div>
 
@@ -159,17 +166,29 @@
                 <img src="./images/DRDdark2.0.png" alt="Portfolio Image 6">
                 <figcaption>Dream Realm - Suit D</figcaption>
             </figure>
+            <figure class="gallery-item-big">
+                <img src="./images/DR-X.jpg" alt="Portfolio Image 6">
+                <figcaption>Dream Realm X</figcaption>
+            </figure>
+            <figure class="gallery-item-big">
+                <img src="./images/DR-Y.jpg" alt="Portfolio Image 6">
+                <figcaption>Dream Realm Y</figcaption>
+            </figure>
+            <figure class="gallery-item-big">
+                <img src="./images/DR-Z.jpg" alt="Portfolio Image 6">
+                <figcaption>Dream Realm Z</figcaption>
+            </figure>
         </div>
     </div>
 
     <div class="content"  id="section2">
         <h1>LANDSCAPES</h1>
         <div class="gallery-container">
-            <figure class="gallery-item">
+            <figure class="gallery-item-mid">
                 <img src="./images/龙.jpg" alt="Portfolio Image 6">
                 <figcaption>landscape 1</figcaption>
             </figure>
-            <figure class="gallery-item">
+            <figure class="gallery-item-mid">
                 <img src="./images/DRYlandscape(4.0).png" alt="Portfolio Image 5">
                 <figcaption>landscape 2</figcaption>
             </figure>
@@ -179,21 +198,6 @@
             </figure>
         </div>
     </div>
-
-    <div class="content"  id="section3">
-        <h1>PROCESS</h1>
-        <div class="gallery-container">
-            <figure class="gallery-item-big">
-                <img src="./images/DR-Z (1).jpeg" alt="Portfolio Image 4">
-                <figcaption>Suit Z progress map</figcaption>
-            </figure>
-            <figure class="gallery-item-big">
-                <img src="./images/DR(progress).jpg" alt="Portfolio Image 4">
-                <figcaption>Sketches & Reference</figcaption>
-            </figure>
-        </div>
-    </div>
-
 
     <section class="services" id="section5">
         <div class="container">
